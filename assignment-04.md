@@ -17,7 +17,7 @@ variable $X$, Markov's inequality states that:
 $$\mathbf{P}[X \geq \alpha] \leq \frac{\mathbf{E}[X]}{\alpha}$$
 
 **1a)** What is the probability that Quicksort does $\Omega({n^2})$
-  comparisons? 
+  comparisons? \textbf{Hint:} Let $X$ be a random variable which outputs the amount of work done by Quicksort. Then to calculate the probability that the amount of work performed by Quicksort is $\Omega({n^2})$, you should decide what to set $\alpha$ to and what $\mathbf{E}[X]$ should be.
 .  
 .  
 **enter answer in `answers.md`**
@@ -25,9 +25,9 @@ $$\mathbf{P}[X \geq \alpha] \leq \frac{\mathbf{E}[X]}{\alpha}$$
 .  
 
 
-**1b)** What is the probability that Quicksort does $10^c n \ln n$
+**1b)** What is the probability that Quicksort does $10^c n \lg n$
 comparisons, for a given $c>0$? What does this say about the
-"concentration" of the expected work for Quicksort?
+deviation of the actual work from the expected work for Quicksort? \textbf{Hint:} Once again, use Markov's inequality deciding what $\alpha$ and $\mathbf{E}[X]$ should be.
 .  
 .  
 **enter answer in `answers.md`**
@@ -41,9 +41,9 @@ At your new job designing
 algorithms for really hard problems, you're put to work solving
 problem $X$. Your predecessor has left you with an
 algorithm $\mathcal{A}$ for problem $X$ that has a deterministic
-worst-case work, but only produces the correct output with a certain
- probability of success. Moreover, we can also check whether the correct
-result was produced with $O(W(n))$ work in the worst case.
+worst-case work of $O(w(n))$, but only produces the correct output with a certain
+ probability of success. Moreover, we can also verify whether the correct
+result was produced with $O(v(n))$ work. $v(n) \in O(w(n))$.
 
 Let $\mathcal{A}(\mathcal{I})$ denote the output of an
 algorithm $\mathcal{A}$ on input $\mathcal{I}$. So $\mathcal{A}(\mathcal{I})$ has a probability of $\epsilon$ of being
@@ -58,8 +58,8 @@ $\mathcal{C}(\mathcal{A}(\mathcal{I}))$ denote the output of
   probability $\delta$. It is sufficient to give a high level
   description of $\mathcal{A}'$. What is
   the work of $\mathcal{A}'$ in terms of $n$, $\delta$, and
-  $\epsilon$? (\textbf{Hint}: Each run of $\mathcal{A}$ is
-  independent and does not depend on previous runs.)  
+  $\epsilon$? \textbf{Hint}: Each run of $\mathcal{A}$ is
+  independent and does not depend on previous runs.  
 .  
 .  
 **enter answer in `answers.md`**
@@ -69,7 +69,7 @@ $\mathcal{C}(\mathcal{A}(\mathcal{I}))$ denote the output of
 **2b)** Your boss and co-workers are impressed, but you want to do
   even better. Show how to convert $\mathcal{A}$ into an
   algorithm that always produces the correct result, but has an
-  expected runtime that depends on $W(n)$ and the success probability
+  expected runtime that depends on $w(n)$ and a success probability
   $\epsilon$.
 .  
 .  
