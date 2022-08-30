@@ -20,7 +20,7 @@ $$\mathbf{P}[X \geq \alpha] \leq \frac{\mathbf{E}[X]}{\alpha}$$
   comparisons? \textbf{Hint:} Let $X$ be a random variable which outputs the amount of work done by Quicksort. Then to calculate the probability that the amount of work performed by Quicksort is $\Omega({n^2})$, you should decide what to set $\alpha$ to and what $\mathbf{E}[X]$ should be.
 .  
 .  
-**enter answer in `answers.md`**
+**Enter answer in `answers.md`**
 .  
 .  
 
@@ -30,7 +30,7 @@ comparisons, for a given $c>0$? What does this say about the
 deviation of the actual work from the expected work for Quicksort? \textbf{Hint:} Once again, use Markov's inequality deciding what $\alpha$ and $\mathbf{E}[X]$ should be.
 .  
 .  
-**enter answer in `answers.md`**
+**Enter answer in `answers.md`**
 .  
 .  
 
@@ -62,7 +62,7 @@ $\mathcal{C}(\mathcal{A}(\mathcal{I}))$ denote the output of
   independent and does not depend on previous runs.  
 .  
 .  
-**enter answer in `answers.md`**
+**Enter answer in `answers.md`**
 .  
 .  
 
@@ -71,11 +71,10 @@ $\mathcal{C}(\mathcal{A}(\mathcal{I}))$ denote the output of
   algorithm that always produces the correct result, but has an
   expected runtime that depends on $w(n)$ and a success probability
   $\epsilon$.
+
 .  
 .  
-**enter answer in `answers.md`**
-.  
-.  
+**Enter answer in `answers.md`**
 
 
 ## Part 3: Determinism versus Randomization in Quicksort
@@ -115,12 +114,12 @@ different list sizes. The `print_results` function in `main.py` gives
 a table of results, but feel free to use code from Lab 1 to plot
 the results as well. 
 
-**enter answers in `answers.md`**
+**Enter answers in `answers.md`**
 
 **3c)**
 
 Python uses a sorting algorithm called [*Timsort*](https://en.wikipedia.org/wiki/Timsort), designed by Tim Peters. Compare the fastest of your sorting implementations to the Python
 sorting function `sorted`, conducting the tests in 3b above. 
 
-**enter answers in `answers.md`**
+**Enter answers in `answers.md`**
 
