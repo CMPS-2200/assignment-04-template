@@ -7,7 +7,7 @@
 Place all written answers from `assignment-04.md` here for easier grading.
 
 
-
+**1 Quicksort probabilities**
 
 - **1a.**
 
@@ -17,7 +17,7 @@ Place all written answers from `assignment-04.md` here for easier grading.
 - **1b.**
 
 
-
+**2 From "Maybe" to "Definitely"**
 
 - **2a.**
 
@@ -26,7 +26,7 @@ Place all written answers from `assignment-04.md` here for easier grading.
 
 - **2b.**
 
-
+**3 Determinism versus Randomization in Quicksort**
 
 
 - **3b.**
