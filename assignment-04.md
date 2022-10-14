@@ -109,17 +109,21 @@ random permutations of the specified sizes, and a comparison using
 already sorted permutations. How do the running times compare to the
 asymptotic bounds? How does changing the type of input list change the
 relative performance of these algorithms? Note that you may have to
-modify the list sizes based on your system memory; compare at least 10
-different list sizes. The `print_results` function in `main.py` gives
-a table of results, but feel free to use code from Lab 1 to plot
-the results as well. 
+modify the list sizes based on your system memory. When running the 
+fixed pivot quicksort on an already sorted list, list sizes
+signicantly over 800 might cause quicksort to exhaust your recursion
+depth. If this happens, lower the maximum list size.
+
+The `print_results` function in `main.py` gives
+a table of results, but feel free to plot the results as well. 
 
 **Enter answers in `answers.md`**
 
 **3c)**
 
-Python uses a sorting algorithm called [*Timsort*](https://en.wikipedia.org/wiki/Timsort), designed by Tim Peters. Compare the fastest of your sorting implementations to the Python
-sorting function `sorted`, conducting the tests in 3b above. 
+Python uses a sorting algorithm called [*Timsort*](https://en.wikipedia.org/wiki/Timsort), designed by Tim Peters. Compare the fastest of your sorting implementations to the Python sorting function `sorted`, conducting the tests in 3b above. Here you should no longer be testing the fixed pivot quicksort variant and
+should not be severely restricted by your systems recursion depth. Perform
+this comparison using larger sizes.
 
 **Enter answers in `answers.md`**
 

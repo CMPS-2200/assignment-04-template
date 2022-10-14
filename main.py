@@ -1,7 +1,8 @@
 import random, time
 import tabulate
 
-def ssort(L):
+def ssort(a):
+    L = list(a)
     for i in range(len(L)):
         #print(L)
         m = L.index(min(L[i:]))
@@ -36,30 +37,33 @@ def time_sort(sort_fn, mylist):
     return (time.time() - start) * 1000
     ###
 
-def compare_sort(sizes=[100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000]):
+def compare_sort(sizes=[100, 200, 400, 800]): #, 1600, 3200, 6400, 12800, 25600, 51200, 102400]):
     """
     Compare the running time of different sorting algorithms.
 
     Returns:
       A list of tuples of the form
-      (n, linear_search_time, binary_search_time)
+      (n, sorting_alg1_time, sorting_alg2_time, sorting_alg3_time)
       indicating the number of milliseconds it takes
       for each method to run on each value of n
     """
     ### TODO - sorting algorithms for comparison
-    qsort_fixed_pivot = # 
+    qsort_fixed_pivot = #
     qsort_random_pivot = #
-    tim_sort = #
+    # tim_sort = sorted
     result = []
     for size in sizes:
         # create list in ascending order
         mylist = list(range(size))
+
         # shuffles list if needed
         #random.shuffle(mylist)
+
         result.append([
             len(mylist),
+            time_sort(ssort, mylist),
             time_sort(qsort_fixed_pivot, mylist),
-            time_sort(qsort_random_pivot, mylist),
+            time_sort(qsort_random_pivot, mylist)
         ])
     return result
     ###
@@ -67,7 +71,7 @@ def compare_sort(sizes=[100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 10
 def print_results(results):
     """ change as needed for comparisons """
     print(tabulate.tabulate(results,
-                            headers=['n', 'qsort-fixed-pivot', 'qsort-random-pivot'],
+                            headers=['n', 'ssort', 'qsort-fixed-pivot', 'qsort-random-pivot'],
                             floatfmt=".3f",
                             tablefmt="github"))
 
@@ -78,4 +82,4 @@ def test_qsort_random():
 	assert(qsort([5,4,3,2,1], lambda a: random.choice(a))) == [1,2,3,4,5]
 
 random.seed()
-print_results(compare_sort())
+# print_results(compare_sort())
