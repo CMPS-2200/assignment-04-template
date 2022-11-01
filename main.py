@@ -24,13 +24,12 @@ def time_sort(sort_fn, mylist):
     You'll have to multiple by 1000 to get milliseconds.
 
     Params:
-      sort_fn.....the search function
-      mylist......the list to search
-      key.........the search key 
+      sort_fn.....the sort function
+      mylist......the list to sort
 
     Returns:
       the number of milliseconds it takes to run this
-      search function on this input.
+      sort function on this input.
     """
     start = time.time()
     sort_fn(mylist)
